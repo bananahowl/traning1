@@ -40,7 +40,7 @@ public class DemoResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("all")
     public String allUsers() {
-        System.out.println("magic bois");
+        System.out.println("magic boiss");
         EntityManager em = EMF.createEntityManager();
         try {
             List<User> users = em.createQuery("select user from User user").getResultList();
