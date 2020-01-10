@@ -20,12 +20,25 @@ public class Person implements Serializable {
     private Long id;
     
     private String email;
-    
-    private String phone;
-    
-    private String firstName;
-    
+    private String phone;  
+    private String firstName;  
     private String lastName;
+    
+    /*
+    @Column(name = "user_email")
+    private String email;
+    @NotNull
+    @Size(min = 1, max = 255)
+    @Column(name = "user_pass")
+    private String userPass;
+    @JoinTable(name = "user_roles", joinColumns = {
+        @JoinColumn(name = "user_name", referencedColumnName = "user_name")}, inverseJoinColumns = {
+        @JoinColumn(name = "role_name", referencedColumnName = "role_name")})
+    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
+    private List<CustomRecipe> cust = new ArrayList();
+    @ManyToMany
+    private List<Role> roleList = new ArrayList();
+    */
     
     public Person() {
     }
