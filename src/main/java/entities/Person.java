@@ -1,10 +1,13 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
@@ -20,11 +23,21 @@ public class Person implements Serializable {
     private Long id;
     
     private String email;
+    
     private String phone;  
+    
     private String firstName;  
+    
     private String lastName;
     
+    @ManyToMany
+    private List<Hobby> listHobby;
+    
+    @ManyToOne
+    private List<Address> listAddress;
+    
     /*
+    to use 
     @Column(name = "user_email")
     private String email;
     @NotNull
