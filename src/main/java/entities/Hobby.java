@@ -41,8 +41,8 @@ public class Hobby implements Serializable {
    // @Column(name ="name")
     private String description;
     
-    @ManyToMany
-    private List<Person> listPerson;
+//    @ManyToMany
+//    private List<Person> listPerson;
 
     public Long getId() {
         return id;

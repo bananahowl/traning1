@@ -30,12 +30,12 @@ public class Person implements Serializable {
     
     private String lastName;
     
-    @ManyToMany
-    private List<Hobby> listHobby;
-    
-    @ManyToOne
-    private List<Address> listAddress;
-    
+//    @ManyToMany
+//    private List<Hobby> listHobby;
+//    
+//    @ManyToOne
+//    private List<Address> listAddress;
+//    
     /*
     to use 
     @Column(name = "user_email")
