@@ -6,11 +6,13 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -38,6 +40,9 @@ public class Hobby implements Serializable {
     
    // @Column(name ="name")
     private String description;
+    
+    @ManyToMany
+    private List<Person> listPerson;
 
     public Long getId() {
         return id;
